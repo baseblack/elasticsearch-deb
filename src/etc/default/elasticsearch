@@ -22,3 +22,6 @@ CONF_DIR=/etc/elasticsearch
 
 # ElasticSearch configuration file (elasticsearch.yml)
 CONF_FILE=/etc/elasticsearch/elasticsearch.yml
+
+ES_HOME=/opt/oss/elasticsearch/0.18.7
+PID_FILE=/var/run/elasticsearch.pid

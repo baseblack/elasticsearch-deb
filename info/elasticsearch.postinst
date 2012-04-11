@@ -10,7 +10,7 @@ case "$1" in
 	    addgroup --system "$ES_GROUP" --quiet
 	fi
 	if ! id $ES_USER > /dev/null 2>&1 ; then
-	    adduser --system --home /usr/share/elasticsearch --no-create-home \
+	    adduser --system --home /opt/oss/elasticsearch/0.18.7 --no-create-home \
 		--ingroup "$ES_GROUP" --disabled-password --shell /bin/false \
 		"$ES_USER"
 	fi
@@ -36,4 +36,8 @@ if [ -x "/etc/init.d/elasticsearch" ]; then
 		/etc/init.d/elasticsearch start || true
 	fi
 fi
+#if [ -f "/etc/init/elasticsearch.conf" ]; then
+#	echo "Starting ElasticSearch with Upstart"
+#	start elasticsearch || true
+#fi
 

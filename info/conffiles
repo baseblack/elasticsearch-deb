@@ -1,4 +1,5 @@
 /etc/init.d/elasticsearch
 /etc/default/elasticsearch
+/etc/init/elasticsearch.conf
 /etc/elasticsearch/logging.yml
 /etc/elasticsearch/elasticsearch.yml

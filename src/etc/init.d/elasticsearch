@@ -86,7 +86,7 @@ CONF_FILE=$CONF_DIR/elasticsearch.yml
 if [ -f "$DEFAULT" ]; then
 	. "$DEFAULT"
 fi
-
+####
 # Define other required variables
 PID_FILE=/var/run/$NAME.pid
 DAEMON=$ES_HOME/bin/elasticsearch

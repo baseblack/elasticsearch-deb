@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e
 
+#if [ -f "/etc/init/elasticsearch.conf" ]; then
+#	echo "Stopping ElasticSearch with Upstart"
+#	stop elasticsearch || true
+#fi
+
 if [ -x "/etc/init.d/elasticsearch" ]; then
 	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
 		invoke-rc.d elasticsearch stop || true
